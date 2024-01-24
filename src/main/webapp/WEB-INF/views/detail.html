@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Detail</title>
+</head>
+<a href="/products">Back to list</a>
+<body>
+<h3>Detail</h3>
+<label for="name">Name: </label>
+<span id="name" th:text="${details.get().name}"></span>
+<br/>
+<label for="code">Code: </label>
+<span id="code" th:text="${details.get().code}"></span>
+<br/>
+<label for="description">Description: </label>
+<span id="description" th:text="${details.get().description}"></span>
+<br/>
+<label for="price">Price: </label>
+<span id="price" th:text="${details.get().price}"></span>
+<br/>
+<label for="date">Date: </label>
+<span id="date" th:text="${details.get().dateTime}"></span>
+<br/>
+</body>
+</html>

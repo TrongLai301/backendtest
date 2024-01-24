@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Delete</title>
+</head>
+<body>
+<form th:action="@{/products/delete}" th:object="${product}" method="post">
+    <h1>Bạn có chắc chắn muốn xóa sản phẩm này không??</h1>
+    <label for="name">Name: </label>
+    <span id="name" th:text="${product.name}"></span>
+    <br/>
+    <label for="code">Code: </label>
+    <span id="code" th:text="${product.code}"></span>
+    <br/>
+    <label for="description">Description: </label>
+    <span id="description" th:text="${product.description}"></span>
+    <br/>
+    <label for="price">Price: </label>
+    <span id="price" th:text="${product.price}"></span>
+    <br/>
+    <label for="date">Date: </label>
+    <span id="date" th:text="${product.dateTime}"></span>
+    <br/>
+    <input type="hidden" th:field="*{id}">
+    <input type="submit" value="Có"/>
+    <a href="/products">Không</a>
+</form>
+</body>
+</html>
